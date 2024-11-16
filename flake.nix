@@ -20,6 +20,12 @@
             modules = [
               (import ./home.nix { inherit pkgs; })
             ];
+            extraSpecialArgs = {
+              inputs = {
+                inherit nixpkgs flake-utils home-manager;
+              };
+              inherit username;
+            };
           };
         }
     );
