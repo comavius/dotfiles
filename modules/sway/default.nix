@@ -16,6 +16,7 @@
       Comment=An cd-compatible Wayland compositor
       Exec=sway
       Type=Application
+      DesktopNames=sway
     '';
   };
 }
