@@ -1,5 +1,5 @@
 {pkgs, username, ...}: let
-  home-manager-directory = pkgs.stdenv.mkDerivation {
+  home-manager-config-directory = pkgs.stdenv.mkDerivation {
     name = "home-manager-directory";
     src = ./.;
     phases = "installPhase";
@@ -13,7 +13,7 @@ in
   home = {
     homeDirectory = "/home/${username}";
     file = {
-      ".home-manager".source = home-manager-directory;
+      ".home-manager-config".source = home-manager-config-directory;
     };
   };
 }
