@@ -6,6 +6,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixgl.url = "github:nix-community/nixGL";
   };
 
   outputs = {
@@ -13,6 +14,7 @@
     nixpkgs,
     flake-utils,
     home-manager,
+    nixgl,
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
@@ -28,7 +30,7 @@
             ./modules/terminal
           ];
           extraSpecialArgs = {
-            inherit pkgs unfree-pkgs username;
+            inherit pkgs unfree-pkgs username nixgl;
           };
         };
         formatter = pkgs.alejandra;
