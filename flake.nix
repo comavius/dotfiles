@@ -33,6 +33,7 @@
             ./home.nix
             ./modules/shell
             ./modules/terminal
+            ./modules/sway
           ];
           extraSpecialArgs = {
             inherit pkgs unfree-pkgs username;
