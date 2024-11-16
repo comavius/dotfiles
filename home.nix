@@ -2,7 +2,6 @@
   pkgs,
   unfree-pkgs,
   username,
-  nixgl,
   ...
 }: {
   home = {
@@ -15,7 +14,7 @@
       pkgs.home-manager
       unfree-pkgs.helvetica-neue-lt-std
       pkgs.noto-fonts
-      nixgl
+      pkgs.nixgl.nixGLMesa
     ];
     sessionVariables = {
       SHELL = "zsh";

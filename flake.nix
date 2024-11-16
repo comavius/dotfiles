@@ -18,7 +18,12 @@
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
-        pkgs = import nixpkgs {inherit system;};
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [
+            nixgl.overlay
+          ];
+        };
         unfree-pkgs = import nixpkgs {inherit system; config.allowUnfree = true;};
         username = "comavius";
       in {
@@ -30,7 +35,7 @@
             ./modules/terminal
           ];
           extraSpecialArgs = {
-            inherit pkgs unfree-pkgs username nixgl;
+            inherit pkgs unfree-pkgs username;
           };
         };
         formatter = pkgs.alejandra;
