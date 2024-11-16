@@ -9,7 +9,7 @@
   };
 
   outputs = { self, nixpkgs, flake-utils, home-manager }: 
-    flake-utils.lib.eachDefaultSystemPassThrough (system:
+    flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
         username = "comavius";
