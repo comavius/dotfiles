@@ -1,5 +1,6 @@
 {
   pkgs,
+  unfree-pkgs,
   username,
   ...
 }: {
@@ -10,7 +11,7 @@
       pkgs.bottom
       pkgs.gping
       pkgs.home-manager
-      (pkgs // {config.allowUnfree = true;}).helvetica-neue-lt-std
+      unfree-pkgs.helvetica-neue-lt-std
       pkgs.noto-fonts
     ];
     homeDirectory = "/home/${username}";

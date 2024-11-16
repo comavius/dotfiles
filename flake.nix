@@ -17,6 +17,7 @@
     flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = import nixpkgs {inherit system;};
+        unfree-pkgs = import nixpkgs {inherit system; config.allowUnfree = true;};
         username = "comavius";
       in {
         packages.homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
@@ -26,7 +27,7 @@
             ./modules/zsh.nix
           ];
           extraSpecialArgs = {
-            inherit pkgs username;
+            inherit pkgs unfree-pkgs username;
           };
         };
         formatter = pkgs.alejandra;
