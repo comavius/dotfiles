@@ -14,7 +14,6 @@
       unfree-pkgs.helvetica-neue-lt-std
       pkgs.noto-fonts
     ];
-    homeDirectory = "/home/${username}";
     sessionVariables = {
       SHELL = "zsh";
     };
