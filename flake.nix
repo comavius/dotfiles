@@ -25,7 +25,6 @@
           modules = [
             ./home.nix
             ./modules/shell
-            ./modules/file
           ];
           extraSpecialArgs = {
             inherit pkgs unfree-pkgs username;
