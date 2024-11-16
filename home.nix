@@ -10,7 +10,6 @@
       pkgs.bottom
       pkgs.gping
       pkgs.home-manager
-      pkgs.zsh
     ];
     homeDirectory = "/home/${username}";
     sessionVariables = {

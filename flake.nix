@@ -23,6 +23,7 @@
           inherit pkgs;
           modules = [
             ./home.nix
+            ./modules/zsh.nix
           ];
           extraSpecialArgs = {
             inherit pkgs username;
