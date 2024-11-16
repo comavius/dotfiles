@@ -4,6 +4,7 @@
     stateVersion = "24.05";
     packages = [
       pkgs.bottom
+      pkgs.home-manager
     ];
     homeDirectory = "/home/${username}";
   };
