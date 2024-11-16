@@ -11,5 +11,4 @@
 
   targets.genericLinux.enable = true;
   xdg.mime.enable = true;
-  programs.home-manager.enable = true;
 }
