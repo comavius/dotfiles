@@ -4,7 +4,6 @@
     file = {
       ".home-manager/.bashrc"  = {
         source = ./.bashrc;
-        target = "link";
       };
     };
   };
