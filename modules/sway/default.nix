@@ -3,7 +3,7 @@
     enable = true;
   };
   home.file = {
-    ".home-manager/sway/sway.Desktop".text = ''
+    ".home-manager/sway/sway.desktop".text = ''
       [Desktop Entry]
       Name=Sway
       Comment=An i3-compatible Wayland compositor
