@@ -18,13 +18,10 @@
           packages.homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
             inherit pkgs;
             modules = [
-              (import ./home.nix { inherit pkgs; })
+              ./home.nix
             ];
             extraSpecialArgs = {
-              inputs = {
-                inherit nixpkgs flake-utils home-manager;
-              };
-              inherit username;
+              inherit pkgs username;
             };
           };
         }
