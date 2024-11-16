@@ -4,4 +4,5 @@ in {
     enable = true;
     themeFile = "Dracula";
   };
+  home.sessionVariables.TERM = "kitty";
 }
