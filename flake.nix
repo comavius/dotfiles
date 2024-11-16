@@ -24,8 +24,8 @@
           inherit pkgs;
           modules = [
             ./home.nix
-            ./modules/zsh.nix
-            ./modules/file.nix
+            ./modules/shell
+            ./modules/file
           ];
           extraSpecialArgs = {
             inherit pkgs unfree-pkgs username;
