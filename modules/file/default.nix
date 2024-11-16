@@ -5,7 +5,7 @@
     phases = "installPhase";
     installPhase = ''
       mkdir -p $out
-      ln -s $src $out
+      ln -s $src/* $out
     '';
   };
 in
