@@ -1,12 +1,13 @@
 { ... }: {
   wayland.windowManager.sway = {
     enable = true;
-    extraPackages = pkgs: with pkgs; [
-      swaybg
-      swayidle
-      swaylock
-      waybar
-    ];
+    config = {
+      modifier = "Mod4";
+      terminal = "kitty"; 
+      startup = [
+      ];
+    };
+    wrapperFeatures.gtk = true;
   };
   home.file = {
     ".home-manager/sway/sway.desktop".text = ''
