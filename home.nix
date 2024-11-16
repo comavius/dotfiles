@@ -1,4 +1,8 @@
-{ pkgs, username, ... }: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   home = {
     inherit username;
     stateVersion = "24.05";

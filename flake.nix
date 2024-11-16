@@ -8,22 +8,27 @@
     };
   };
 
-  outputs = { self, nixpkgs, flake-utils, home-manager }: 
-    flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs { inherit system; };
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    home-manager,
+  }:
+    flake-utils.lib.eachDefaultSystem (
+      system: let
+        pkgs = import nixpkgs {inherit system;};
         username = "comavius";
-      in
-        {
-          packages.homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
-            modules = [
-              ./home.nix
-            ];
-            extraSpecialArgs = {
-              inherit pkgs username;
-            };
+      in {
+        packages.homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./home.nix
+          ];
+          extraSpecialArgs = {
+            inherit pkgs username;
           };
-        }
+        };
+        formatter = pkgs.alejandra;
+      }
     );
 }
