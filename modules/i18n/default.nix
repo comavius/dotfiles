@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   i18n = {
     inputMethod = {
-      enable = true;
+      enabled = "fcitx5";
       fcitx5 = {
         addons =[
           pkgs.fcitx5-configtool
