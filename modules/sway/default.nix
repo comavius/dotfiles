@@ -45,6 +45,8 @@
     ".home-manager/sway/entry.sh" = {
         text = ''
         #!/usr/bin/env bash
+        source ./bash_profile
+        source ./bashrc
         ${pkgs.nixgl.nixGLMesa}/bin/nixGLMesa ${pkgs.sway}/bin/sway
       '';
       executable = true;
