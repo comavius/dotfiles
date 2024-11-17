@@ -9,9 +9,6 @@
     };
     wrapperFeatures.gtk = true;
   };
-  security.pam.services.swaylock = {
-    unixAuth = true;
-  };
   programs.waybar = {
     enable = true;
     settings = {
