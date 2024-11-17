@@ -26,6 +26,12 @@ args @ {
       floating.criteria = [
         {title = "sway-launcher-desktop";}
       ];
+      inputs = {
+        "*" = {
+            xkb_layout = "jp";
+            xkb_variant = "109";
+        };
+      };
     };
     wrapperFeatures.gtk = true;
   };
