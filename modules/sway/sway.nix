@@ -22,7 +22,7 @@ args @ {
           command = "${pkgs.waybar}/bin/waybar";
         }
       ];
-      menu = "kitty fzf";
+      menu = "compgen -c | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec";
     };
     wrapperFeatures.gtk = true;
   };
