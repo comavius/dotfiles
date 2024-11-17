@@ -23,7 +23,9 @@ args @ {
         }
       ];
       menu = ''
-        kitty sway-launcher-desktop & && swaymsg '[title="application_title"] floating enable' && swaymsg '[title="sway-launcher-desktop"] focus' 
+        kitty sway-launcher-desktop &
+        swaymsg '[title="application_title"] floating enable'
+        swaymsg '[title="sway-launcher-desktop"] focus' 
       '';
       floating.criteria = [
         {title = "sway-launcher-desktop";}
