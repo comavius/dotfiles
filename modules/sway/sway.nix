@@ -23,7 +23,7 @@ args @ {
         }
       ];
       menu = ''
-        sway-launcher-desktop
+        kitty sway-launcher-desktop
       '';
     };
     wrapperFeatures.gtk = true;
