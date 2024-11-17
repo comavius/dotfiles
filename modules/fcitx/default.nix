@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   home.packages = [
-    pkgs.fcitx
-    pkgs.fcitx-configtool
-    pkgs.fcitx-mozc
+    pkgs.fcitx5
+    pkgs.fcitx5-configtool
+    pkgs.fcitx5-mozc
   ];
 }
