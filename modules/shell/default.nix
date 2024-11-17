@@ -18,6 +18,4 @@
     };
   };
   home.sessionVariables.SHELL = "zsh";
-
-  programs.bash.enable = true;
 }

@@ -44,9 +44,9 @@
     '';
     ".home-manager/sway/entry.sh" = {
         text = ''
-        #!/usr/bin/env bash
-        source ./bash_profile
-        source ./bashrc
+        #!${pkgs.zsh}/bin/zsh
+        source /home/${username}/.profile
+        source /home/${username}/.zshrc
         ${pkgs.nixgl.nixGLMesa}/bin/nixGLMesa ${pkgs.sway}/bin/sway
       '';
       executable = true;
