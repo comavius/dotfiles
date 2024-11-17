@@ -6,8 +6,9 @@
     text = ''
       #!${pkgs.zsh}/bin/zsh
       kitty ${pkgs.sway-launcher-desktop}/bin/sway-launcher-desktop &
-      sleep 0.1
-      swaymsg '[title="sway-launcher-desktop"]' floating enable
+      while ! swaymsg -t get_tree | grep -q sway-launcher-desktop; do
+        sleep 0.1
+      done
       swaymsg '[title="sway-launcher-desktop"]' focus
     '';
     executable = true;
