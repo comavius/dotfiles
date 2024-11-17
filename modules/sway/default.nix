@@ -1,8 +1,8 @@
-args @ {...}: let
-  sway = import ./sway.nix args;
-  waybar = import ./waybar.nix args;
-  mako = import ./mako.nix args;
-  launcher = import ./sway-launcher.nix args;
+let
+  sway = import ./sway.nix;
+  waybar = import ./waybar.nix;
+  mako = import ./mako.nix;
+  launcher = import ./sway-launcher.nix;
 in 
 [
   sway
