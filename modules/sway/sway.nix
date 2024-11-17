@@ -22,7 +22,7 @@ args @ {
           command = "${pkgs.waybar}/bin/waybar";
         }
       ];
-      menu = "/home/${username}/.home-manager/sway/sway-launcher.sh";
+      menu = "rofi -show drun";
       floating.criteria = [
         {title = "sway-launcher-desktop";}
       ];
