@@ -38,7 +38,7 @@
             ./modules/terminal
             ./modules/sway/mako.nix
             ./modules/sway/sway.nix
-            ./modules/sway/sway-launcher.nix
+            ./modules/sway/rofi.nix
             ./modules/sway/waybar.nix
             ./modules/sway/desktop-entry.nix
             ./modules/i18n
