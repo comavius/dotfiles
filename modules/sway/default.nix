@@ -43,7 +43,7 @@
       DesktopNames=sway
     '';
     ".home-manager/sway/sway-session.sh".text = ''
-      sway
+      /home/${username}/.nix-profile/bin/sway
     '';
   };
 }
