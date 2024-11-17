@@ -27,8 +27,10 @@ args @ {
         {title = "sway-launcher-desktop";}
       ];
       input = {
-        "*" = {
+        "type:keyboard" = {
             xkb_layout = "jp";
+        };
+        "type:touchpad" = {
             natural_scroll = "disabled";
         };
       };
