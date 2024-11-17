@@ -6,7 +6,7 @@
       terminal = "kitty";
       startup = [
       ];
-    bars = [ "waybar" ];
+    bars = [ ];
     };
     wrapperFeatures.gtk = true;
   };
@@ -47,6 +47,7 @@
       /home/${username}/.nix-profile/bin/zsh -l
       source /home/${username}/.zshrc
       nixGLMesa sway
+      nixGLMesa waybar
     '';
   };
 }
