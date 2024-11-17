@@ -1,7 +1,4 @@
 {pkgs, ...}: {
-  programs.fcitx5 = {
-    enable = true;
-  };
   i18n = {
     inputMethod = {
       enabled = "fcitx5";
