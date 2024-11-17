@@ -26,7 +26,7 @@ args @ {
       floating.criteria = [
         {title = "sway-launcher-desktop";}
       ];
-      inputs = {
+      input = {
         "*" = {
             xkb_layout = "jp";
             xkb_variant = "109";
