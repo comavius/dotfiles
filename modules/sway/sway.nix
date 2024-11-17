@@ -23,7 +23,7 @@ args @ {
         }
       ];
       menu = ''
-        kitty sway-launcher-desktop
+        kitty sway-launcher-desktop && swaymsg '[title="sway-launcher-desktop"]' focus
       '';
       floating.criteria = [
         {title = "sway-launcher-desktop";}
