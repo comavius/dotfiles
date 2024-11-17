@@ -20,6 +20,7 @@
     '';
     ".home-manager/sway/sway-session.sh".text = ''
       #!/home/${username}/.nix-profile/bin/zsh
+      su - ${username}
       echo $PATH
       export PATH=$PATH:/home/${username}/.nix-profile/bin
       echo $PATH
