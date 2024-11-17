@@ -42,7 +42,7 @@
         "sway/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
-          format = "{icon} {name}";
+          format = "{icon}";
         };
         "clock" = {
           "format" = "{:%Y/%m/%d %H:%M}";
@@ -53,7 +53,7 @@
         };
         "memory" = {
           "interval" = 10;
-          "format" = "RAM: {used:0.1f}GiB/{total:0.1f}GiB ({percentage}%) SWAP: {swapUsed:0.1f}GiB/{swapTotal:0.1f}GiB ({swapPercentage}%)";
+          "format" = "RAM: {percent}%";
         };
         "battery" = {
           "bat" = "BAT0";
