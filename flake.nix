@@ -36,7 +36,11 @@
             ./home.nix
             ./modules/shell
             ./modules/terminal
-          ] ++ ./modules/sway;
+            ./modules/sway/mako.nix
+            ./modules/sway/sway.nix
+            ./modules/sway/sway-launcher.nix
+            ./modules/sway/waybar.nix
+          ];
           extraSpecialArgs = {
             inherit pkgs unfree-pkgs username;
           };
