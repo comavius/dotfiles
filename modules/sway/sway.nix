@@ -39,7 +39,7 @@ args @ {
     wrapperFeatures.gtk = true;
   };
   programs.swaylock.enable = true;
-  home.environment.variables = {
+  programs.zsh.localVariables = {
     GTK_THEME = "Adwaita:dark";
   };
 }
