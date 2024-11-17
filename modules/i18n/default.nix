@@ -3,7 +3,7 @@
     inputMethod = {
       enabled = "fcitx5";
       fcitx5 = {
-        addons =[
+        addons = [
           pkgs.fcitx5-configtool
           pkgs.fcitx5-mozc
         ];

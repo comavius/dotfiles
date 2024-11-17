@@ -29,11 +29,11 @@ args @ {
       ];
       input = {
         "type:keyboard" = {
-            xkb_layout = "jp";
+          xkb_layout = "jp";
         };
         "type:touchpad" = {
-            natural_scroll = "enabled";
-            tap = "enabled";
+          natural_scroll = "enabled";
+          tap = "enabled";
         };
       };
     };
