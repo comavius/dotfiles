@@ -1,7 +1,7 @@
-{unfree-pkgs, ...}: {
+{...}: {
   services.mako = {
     enable = true;
-    font = unfree-pkgs.helvetica-neue-lt-std;
+    font = "Noto Sans CJK 12";
     layer = "top";
     icons = true;
     anchor = "top-right";
