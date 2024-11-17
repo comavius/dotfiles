@@ -40,6 +40,7 @@
             ./modules/sway/sway.nix
             ./modules/sway/sway-launcher.nix
             ./modules/sway/waybar.nix
+            ./modules/sway/desktop-entry.nix
           ];
           extraSpecialArgs = {
             inherit pkgs unfree-pkgs username;
