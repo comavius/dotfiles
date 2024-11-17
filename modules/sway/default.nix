@@ -6,9 +6,9 @@
       terminal = "kitty";
       startup = [
       ];
+    bars = [ "waybar" ];
     };
     wrapperFeatures.gtk = true;
-    bars = [ "waybar" ];
   };
   programs.waybar = {
     enable = true;
