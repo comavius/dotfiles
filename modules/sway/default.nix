@@ -8,6 +8,7 @@
       ];
     };
     wrapperFeatures.gtk = true;
+    bars = [ "waybar" ];
   };
   programs.waybar = {
     enable = true;
@@ -31,6 +32,7 @@
       };
     };
   };
+  programs.swaylock.enable = true;
   home.file = {
     ".home-manager/sway/sway.desktop".text = ''
       [Desktop Entry]
