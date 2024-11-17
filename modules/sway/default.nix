@@ -21,7 +21,7 @@
     ".home-manager/sway/sway-session.sh".text = ''
       #!/home/${username}/.nix-profile/bin/zsh
       echo $PATH
-      su - ${username} -c "source /home/${username}/.zshrc"
+      export PATH=$PATH:/home/${username}/.nix-profile/bin
       echo $PATH
       nixGLMesa sway 2&> /home/${username}/.home-manager/sway/sway.log
     '';
