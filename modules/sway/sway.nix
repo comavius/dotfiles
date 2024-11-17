@@ -22,8 +22,9 @@ args @ {
           command = "${pkgs.waybar}/bin/waybar";
         }
       ];
-      menu = "(alias -L | awk '{print $1}'; functions | awk '{print $1}'; print -rl -- \${(ko)commands}) | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec
-";
+      menu = ''
+        kitty \"(alias -L | awk '{print $1}'; functions | awk '{print $1}'; print -rl -- \$\{(ko)commands}) | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec\"
+      '';
     };
     wrapperFeatures.gtk = true;
   };
