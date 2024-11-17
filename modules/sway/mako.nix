@@ -1,7 +1,7 @@
 {...}: {
   services.mako = {
     enable = true;
-    font = "Noto Sans CJK 12";
+    font = "Helvetica, Noto Sans CJK 12";
     layer = "top";
     icons = true;
     anchor = "top-right";
