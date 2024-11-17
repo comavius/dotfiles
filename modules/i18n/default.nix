@@ -11,8 +11,8 @@
     };
   };
   programs.zsh.localVariables = {
-    GTK_IM_MODULE = "fcitx";
-    QT_IM_MODULE = "fcitx";
-    XMODIFIERS = "@im=fcitx";
+    GTK_IM_MODULE = "fcitx5";
+    QT_IM_MODULE = "fcitx5";
+    XMODIFIERS = "@im=fcitx5";
   };
 }
