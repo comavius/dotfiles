@@ -1,4 +1,4 @@
-{ ... }: {
+{ username, ... }: {
   wayland.windowManager.sway = {
     enable = true;
     config = {
@@ -14,9 +14,14 @@
       [Desktop Entry]
       Name=Sway
       Comment=An cd-compatible Wayland compositor
-      Exec=sway
+      Exec=/home/${username}/.home-manager/sway/sway-session.sh
       Type=Application
       DesktopNames=sway
+    '';
+    ".home-manager/sway/sway-session.sh".text = ''
+      #!/home/${username}/.nix-profile/bin/zsh
+      source /home/${username}/.zshrc
+      nixGLMesa sway
     '';
   };
 }
