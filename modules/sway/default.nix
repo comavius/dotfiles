@@ -1,4 +1,4 @@
-{username, ...}: {
+{username, pkgs, ...}: {
   wayland.windowManager.sway = {
     enable = true;
     config = {
@@ -38,12 +38,16 @@
       [Desktop Entry]
       Name=Sway
       Comment=An cd-compatible Wayland compositor
-      Exec=sh /home/${username}/.home-manager/sway/sway-session.sh
+      Exec=${pkgs.nixgl.nixGLMesa}/bin/sway ${pkgs.sway}/bin/sway
       Type=Application
       DesktopNames=sway
     '';
-    ".home-manager/sway/sway-session.sh".text = ''
-      /home/${username}/.nix-profile/bin/sway
-    '';
+    ".home-manager/sway/entry.sh" = {
+        text = ''
+        #!/usr/bin/env bash
+        ${pkgs.nixgl.nixGLMesa}/bin/sway ${pkgs.sway}/bin/sway
+      '';
+      mode = "0755";
+    };
   };
 }
