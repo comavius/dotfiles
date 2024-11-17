@@ -25,6 +25,7 @@ args @ {
       menu = ''
         kitty sway-launcher-desktop
       '';
+      floating.menu = true;
     };
     wrapperFeatures.gtk = true;
   };
