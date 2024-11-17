@@ -38,7 +38,7 @@ args @ {
     };
     wrapperFeatures.gtk = true;
     extraSessionCommands = ''
-      export GTK_THEME="Adwaita:dark"
+      export GTK_THEME="Adwaita-dark"
     '';
   };
   programs.swaylock.enable = true;
