@@ -6,5 +6,6 @@
     pkgs.libreoffice
     pkgs.bottom
     pkgs.gping
+    pkgs.nixd
   ];
 }
