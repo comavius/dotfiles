@@ -9,6 +9,6 @@
         ];
       };
     };
-    glibcLocales = "ja_JP.UTF-9";
+    defaultLocale = "ja_JP.UTF-9";
   };
 }
