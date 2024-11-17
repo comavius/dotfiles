@@ -47,7 +47,7 @@
         #!/usr/bin/env bash
         ${pkgs.nixgl.nixGLMesa}/bin/sway ${pkgs.sway}/bin/sway
       '';
-      mode = "0755";
+      executable = true;
     };
   };
 }
