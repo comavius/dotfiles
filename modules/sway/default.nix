@@ -10,9 +10,19 @@
       terminal = "kitty";
       startup = [
       ];
+      gaps = {
+        inner = 10;
+      };
+      window = {
+        titlebar = false;
+      };
+      focus = {
+        followMouse = "always";
+        newWindow = "focus";
+      };
       bars = [
         {
-          command = "${pkgs.waybar}/bin/waybar"; 
+          command = "${pkgs.waybar}/bin/waybar";
         }
       ];
     };
