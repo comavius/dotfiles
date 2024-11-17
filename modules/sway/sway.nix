@@ -22,7 +22,7 @@ args @ {
           command = "${pkgs.waybar}/bin/waybar";
         }
       ];
-      menu = "fzf";
+      menu = "kitty fzf";
     };
     wrapperFeatures.gtk = true;
   };
