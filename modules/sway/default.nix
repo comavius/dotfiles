@@ -14,7 +14,7 @@
       [Desktop Entry]
       Name=Sway
       Comment=An cd-compatible Wayland compositor
-      Exec=/home/${username}/.home-manager/sway/sway-session.sh
+      Exec=sh /home/${username}/.home-manager/sway/sway-session.sh
       Type=Application
       DesktopNames=sway
     '';
