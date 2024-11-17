@@ -29,7 +29,7 @@ args @ {
       input = {
         "*" = {
             xkb_layout = "jp";
-            libinput.natural_scroll = "disabled";
+            libinput.natural_scroll = false;
         };
       };
     };
