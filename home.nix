@@ -23,7 +23,7 @@
 
   targets.genericLinux.enable = true;
   xdg.mime.enable = true;
-  gtk3.extraConfig = ''
+  gtk.gtk3.extraConfig = ''
     gtk-application-prefer-dark-theme = true
   '';
 }
