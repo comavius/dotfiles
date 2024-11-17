@@ -11,7 +11,7 @@
       startup = [
       ];
       gaps = {
-        inner = 100;
+        outer = 100;
       };
       window = {
         titlebar = false;
