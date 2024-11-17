@@ -53,7 +53,7 @@
         };
         "memory" = {
           "interval" = 10;
-          "format" = "RAM: {percent}%";
+          "format" = "RAM: {percentage}%";
         };
         "battery" = {
           "bat" = "BAT0";
