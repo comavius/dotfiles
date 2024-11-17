@@ -11,7 +11,7 @@
       startup = [
       ];
       bars = [
-        pkgs.waybar
+        "waybar"
       ];
     };
     wrapperFeatures.gtk = true;
