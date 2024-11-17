@@ -8,6 +8,9 @@
       if swaymsg -t get_tree | grep -q sway-launcher-desktop; then
         swaymsg  '[title="sway-launcher-desktop"] kill'
       fi
+      while swaymsg -t get_tree | grep -q sway-launcher-desktop; do
+        sleep 0.1
+      done
       kitty ${pkgs.sway-launcher-desktop}/bin/sway-launcher-desktop &
       while ! swaymsg -t get_tree | grep -q sway-launcher-desktop; do
         sleep 0.1
