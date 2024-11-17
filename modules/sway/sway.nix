@@ -29,7 +29,7 @@ args @ {
       input = {
         "*" = {
             xkb_layout = "jp";
-            xkb_variant = "109";
+            xkb_variant = "jp";
         };
       };
     };
