@@ -7,7 +7,6 @@
           pkgs.fcitx5-configtool
           pkgs.fcitx5-mozc
         ];
-        waylandFrontend = true;
       };
     };
   };
