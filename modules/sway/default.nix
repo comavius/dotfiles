@@ -19,7 +19,10 @@
       DesktopNames=sway
     '';
     ".home-manager/sway/sway-session.sh".text = ''
-      /home/${username}/.nix-profile/bin/nixGLMesa /home/${username}/.nix-profile/bin/sway
+      su - ${username}
+      /home/${username}/.nix-profile/bin/zsh -l
+      source /home/${username}/.zshrc
+      nixGLMesa sway
     '';
   };
 }
