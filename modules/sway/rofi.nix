@@ -1,7 +1,7 @@
 {...}: {
   programs.rofi = {
     enable = true;
-    theme = "dracula";
+    theme = "Arc-Dark";
     terminal = "kitty";
     font = "Noto Sans CJK 12";
   };
