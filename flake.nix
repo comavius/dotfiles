@@ -24,7 +24,10 @@
             nixgl.overlay
           ];
         };
-        unfree-pkgs = import nixpkgs {inherit system; config.allowUnfree = true;};
+        unfree-pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
         username = "comavius";
       in {
         packages.homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
