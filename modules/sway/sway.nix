@@ -31,7 +31,7 @@ args @ {
             xkb_layout = "jp";
         };
         "type:touchpad" = {
-            natural_scroll = "disabled";
+            natural_scroll = "enabled";
         };
       };
     };
