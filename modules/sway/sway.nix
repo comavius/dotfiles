@@ -33,6 +33,7 @@ args @ {
         };
         "type:touchpad" = {
             natural_scroll = "enabled";
+            tap = "enabled";
         };
       };
     };
