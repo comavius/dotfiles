@@ -22,11 +22,7 @@ args @ {
           command = "${pkgs.waybar}/bin/waybar";
         }
       ];
-      menu = ''
-        kitty sway-launcher-desktop &
-        swaymsg '[title="application_title"] floating enable'
-        swaymsg '[title="sway-launcher-desktop"] focus' 
-      '';
+      menu = "/home/${username}/.home-manager/sway/sway-launcher.sh";
       floating.criteria = [
         {title = "sway-launcher-desktop";}
       ];
@@ -49,6 +45,15 @@ args @ {
         source /home/${username}/.pshenv
         source /home/${username}/.zshrc
         ${pkgs.nixgl.nixGLMesa}/bin/nixGLMesa ${pkgs.sway}/bin/sway
+      '';
+      executable = true;
+    };
+    ".home-manager/sway/sway-launcher.sh" = {
+      text = ''
+        #!${pkgs.zsh}/bin/zsh
+        kitty sway-launcher-desktop &
+        swaymsg '[title="application_title"] floating enable'
+        swaymsg '[title="sway-launcher-desktop"] focus' 
       '';
       executable = true;
     };
