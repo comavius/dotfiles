@@ -23,7 +23,7 @@ args @ {
         }
       ];
       menu = ''
-        kitty sh -c "print -rl -- $\{(ko)commands} | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec"
+        kitty ${pkgs.bash}/bin/bash -c "compgen -c | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec"
       '';
     };
     wrapperFeatures.gtk = true;
