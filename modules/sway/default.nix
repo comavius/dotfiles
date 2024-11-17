@@ -10,9 +10,6 @@
       terminal = "kitty";
       startup = [
       ];
-      gaps = {
-        outer = 100;
-      };
       window = {
         titlebar = false;
       };
@@ -88,7 +85,7 @@
       [Desktop Entry]
       Name=Sway
       Comment=An cd-compatible Wayland compositor
-      Exec=${pkgs.nixgl.nixGLMesa}/bin/sway ${pkgs.sway}/bin/sway
+      Exec=/home/${username}/.home-manager/sway/entry.sh
       Type=Application
       DesktopNames=sway
     '';
