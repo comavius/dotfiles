@@ -3,6 +3,10 @@ args @ {...}: let
   waybar = import ./waybar.nix args;
   mako = import ./mako.nix args;
   launcher = import ./sway-launcher.nix args;
-in {
-  inherit sway waybar mako launcher;
-}
+in 
+[
+  sway
+  waybar
+  mako
+  launcher
+]
