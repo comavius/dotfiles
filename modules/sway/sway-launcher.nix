@@ -9,7 +9,8 @@
       while ! swaymsg -t get_tree | grep -q sway-launcher-desktop; do
         sleep 0.1
       done
-      swaymsg '[title="sway-launcher-desktop"]' focus
+      swaymsg '[title="sway-launcher-desktop"] focus'
+      swaymsg '[title="sway-launcher-desktop"] floating enable'
     '';
     executable = true;
   };
