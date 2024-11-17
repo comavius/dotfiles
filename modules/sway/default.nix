@@ -11,7 +11,9 @@
       startup = [
       ];
       bars = [
-        "waybar"
+        {
+          command = "${pkgs.waybar}/bin/waybar"; 
+        }
       ];
     };
     wrapperFeatures.gtk = true;
