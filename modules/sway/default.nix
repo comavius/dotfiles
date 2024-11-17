@@ -20,7 +20,7 @@
     '';
     ".home-manager/sway/sway-session.sh".text = ''
       su - ${username}
-      /home/${username}/.nix-profile/bin/zsh -l
+      /home/${username}/.nix-profile/bin/zsh
       source /home/${username}/.zshrc
       nixGLMesa sway
     '';
