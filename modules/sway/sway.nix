@@ -23,7 +23,7 @@ args @ {
         }
       ];
       menu = ''
-        kitty zsh -c "${pkgs.bash}/bin/bash -c 'compgen -c' | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec"
+        sway-launcher-desktop
       '';
     };
     wrapperFeatures.gtk = true;
