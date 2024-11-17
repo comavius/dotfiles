@@ -25,7 +25,9 @@ args @ {
       menu = ''
         kitty sway-launcher-desktop
       '';
-      floating.menu = true;
+      floating.criteria = [
+        {title = "sway-launcher-desktop";}
+      ];
     };
     wrapperFeatures.gtk = true;
   };
