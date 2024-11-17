@@ -11,7 +11,6 @@
     packages = [
       pkgs.bottom
       pkgs.gping
-      pkgs.home-manager
       unfree-pkgs.helvetica-neue-lt-std
       pkgs.noto-fonts
       pkgs.nixgl.nixGLMesa
