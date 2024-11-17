@@ -39,7 +39,7 @@ args @ {
     wrapperFeatures.gtk = true;
   };
   programs.swaylock.enable = true;
-  environment.variables = {
+  home.environment.variables = {
     GTK_THEME = "Adwaita:dark";
   };
 }
