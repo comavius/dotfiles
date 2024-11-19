@@ -8,5 +8,6 @@
     pkgs.gping
     pkgs.nixd
     pkgs.pre-commit
+    pkgs.nano
   ];
 }
