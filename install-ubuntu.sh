@@ -4,7 +4,7 @@
 # Install necessary packages
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y git curl
+sudo apt install -y git curl swaylock
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix sh -s -- install
 git clone https://github.com/comavius/dotfiles.git ~/.dotfiles
 
