@@ -7,6 +7,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixgl.url = "github:nix-community/nixGL";
+    ubuntu-wallpapers = {
+      url = "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/ubuntu-wallpapers/24.10.3/ubuntu-wallpapers_24.10.3.orig.tar.gz";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -15,6 +19,7 @@
     flake-utils,
     home-manager,
     nixgl,
+    ubuntu-wallpapers,
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
@@ -46,7 +51,7 @@
             ./modules/utils
           ];
           extraSpecialArgs = {
-            inherit pkgs unfree-pkgs username;
+            inherit pkgs unfree-pkgs username ubuntu-wallpapers;
           };
         };
         formatter = pkgs.alejandra;

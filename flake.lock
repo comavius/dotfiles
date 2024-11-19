@@ -108,7 +108,8 @@
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
         "nixgl": "nixgl",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "ubuntu-wallpapers": "ubuntu-wallpapers"
       }
     },
     "systems": {
@@ -124,6 +125,19 @@
         "owner": "nix-systems",
         "repo": "default",
         "type": "github"
+      }
+    },
+    "ubuntu-wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726234475,
+        "narHash": "sha256-dZEKGjRwiHJY/O/2i7hj/YcSynWE/VG6Dqh/pCglKkw=",
+        "type": "tarball",
+        "url": "https://launchpad.net/ubuntu/%2Barchive/primary/%2Bsourcefiles/ubuntu-wallpapers/24.10.3/ubuntu-wallpapers_24.10.3.orig.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://launchpad.net/ubuntu/%2Barchive/primary/%2Bsourcefiles/ubuntu-wallpapers/24.10.3/ubuntu-wallpapers_24.10.3.orig.tar.gz"
       }
     }
   },

@@ -1,8 +1,20 @@
-args @ {
+{
   username,
   pkgs,
+  ubuntu-wallpapers,
   ...
-}: {
+}: let
+  # change color
+  wallpaper = pkgs.stdenv.mkDerivation {
+    name = "wallpaper";
+    src = ubuntu-wallpapers;
+    buildInputs = [pkgs.imagemagick];
+    installPhase = ''
+      mkdir -p $out
+      magick convert $src/hardy_wallpaper_uhd.png -modulate 80,40,220 $out/wallpaper.png
+    '';
+  };
+in {
   wayland.windowManager.sway = {
     enable = true;
     config = {
@@ -37,6 +49,9 @@ args @ {
         };
       };
     };
+    extraConfig = ''
+      output * bg ${wallpaper}/wallpaper.png stretch
+    '';
     wrapperFeatures.gtk = true;
   };
   programs.swaylock.enable = true;
