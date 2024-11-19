@@ -7,5 +7,6 @@
     pkgs.bottom
     pkgs.gping
     pkgs.nixd
+    pkgs.pre-commit
   ];
 }
