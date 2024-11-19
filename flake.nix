@@ -46,6 +46,7 @@
             ./modules/sway/rofi.nix
             ./modules/sway/waybar.nix
             ./modules/sway/desktop-entry.nix
+            ./modules/sway/swayidle.nix
             ./modules/i18n
             ./modules/home-manager
             ./modules/utils

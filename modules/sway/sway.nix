@@ -54,5 +54,4 @@ in {
     '';
     wrapperFeatures.gtk = true;
   };
-  programs.swaylock.enable = true;
 }
