@@ -11,6 +11,10 @@
       url = "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/ubuntu-wallpapers/24.10.3/ubuntu-wallpapers_24.10.3.orig.tar.gz";
       flake = false;
     };
+    tabler-icons = {
+      url = "github:tabler/tabler-icons";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -20,6 +24,7 @@
     home-manager,
     nixgl,
     ubuntu-wallpapers,
+    tabler-icons,
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
@@ -52,7 +57,7 @@
             ./modules/utils
           ];
           extraSpecialArgs = {
-            inherit pkgs unfree-pkgs username ubuntu-wallpapers;
+            inherit pkgs unfree-pkgs username ubuntu-wallpapers tabler-icons;
           };
         };
         formatter = pkgs.alejandra;

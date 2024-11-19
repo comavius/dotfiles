@@ -109,6 +109,7 @@
         "home-manager": "home-manager",
         "nixgl": "nixgl",
         "nixpkgs": "nixpkgs_2",
+        "tabler-icons": "tabler-icons",
         "ubuntu-wallpapers": "ubuntu-wallpapers"
       }
     },
@@ -124,6 +125,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tabler-icons": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731447667,
+        "narHash": "sha256-UkY7qdZL+RSpyH9QCIVFGvzlzPIVUxUb/cPTzs4fv6w=",
+        "owner": "tabler",
+        "repo": "tabler-icons",
+        "rev": "e54656d27e9682d61482626bf9f4d093928b7c95",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tabler",
+        "repo": "tabler-icons",
         "type": "github"
       }
     },

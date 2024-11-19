@@ -7,7 +7,10 @@
         timeout = 60;
         command = "/usr/bin/swaylock -e -L -c 222222";
       }
-      { timeout = 300; command = "systemctl suspend"; }
+      {
+        timeout = 300;
+        command = "systemctl suspend";
+      }
     ];
   };
 }
