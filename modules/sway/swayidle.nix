@@ -4,7 +4,7 @@
     timeouts = [
       # use external swaylock command to make sure pam works
       {
-        timeout = 60;
+        timeout = 270;
         command = "/usr/bin/swaylock -e -L -c 222222";
       }
       {
