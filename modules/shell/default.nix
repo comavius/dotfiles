@@ -1,4 +1,5 @@
-{username, ...}: {
+{ username, ... }:
+{
   programs.zsh = {
     enable = true;
     enableCompletion = true;

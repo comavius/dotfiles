@@ -3,26 +3,29 @@
   pkgs,
   ubuntu-wallpapers,
   ...
-}: let
+}:
+let
   # change color
   wallpaper = pkgs.stdenv.mkDerivation {
     name = "wallpaper";
     src = ubuntu-wallpapers;
-    buildInputs = [pkgs.imagemagick];
+    buildInputs = [ pkgs.imagemagick ];
     installPhase = ''
       mkdir -p $out
       magick convert $src/hardy_wallpaper_uhd.png -modulate 80,40,220 $out/wallpaper.png
     '';
   };
-in {
+in
+{
   wayland.windowManager.sway = {
     enable = true;
     config = {
       modifier = "Mod4";
       terminal = "kitty";
 
-      startup = [
-      ];
+      startup =
+        [
+        ];
       window = {
         titlebar = false;
       };
@@ -37,7 +40,7 @@ in {
       ];
       menu = "rofi -show drun";
       floating.criteria = [
-        {title = "sway-launcher-desktop";}
+        { title = "sway-launcher-desktop"; }
       ];
       input = {
         "type:keyboard" = {

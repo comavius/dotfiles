@@ -17,17 +17,19 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    flake-utils,
-    home-manager,
-    nixgl,
-    ubuntu-wallpapers,
-    tabler-icons,
-  }:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+      home-manager,
+      nixgl,
+      ubuntu-wallpapers,
+      tabler-icons,
+    }:
     flake-utils.lib.eachDefaultSystem (
-      system: let
+      system:
+      let
         pkgs = import nixpkgs {
           inherit system;
           overlays = [
@@ -39,7 +41,8 @@
           config.allowUnfree = true;
         };
         username = "comavius";
-      in {
+      in
+      {
         packages.homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
@@ -57,10 +60,16 @@
             ./modules/utils
           ];
           extraSpecialArgs = {
-            inherit pkgs unfree-pkgs username ubuntu-wallpapers tabler-icons;
+            inherit
+              pkgs
+              unfree-pkgs
+              username
+              ubuntu-wallpapers
+              tabler-icons
+              ;
           };
         };
-        formatter = pkgs.alejandra;
+        formatter = pkgs.nixfmt-rfc-style;
       }
     );
 }

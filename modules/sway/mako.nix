@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   services.mako = {
     enable = true;
     font = "Noto Sans CJK 12";

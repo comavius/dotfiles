@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   programs.waybar = {
     enable = true;
     settings = {
@@ -10,8 +11,11 @@
           "eDP-1"
           "HDMI-A-1"
         ];
-        modules-left = ["sway/workspaces" "wlr/taskbar"];
-        modules-center = ["sway/window"];
+        modules-left = [
+          "sway/workspaces"
+          "wlr/taskbar"
+        ];
+        modules-center = [ "sway/window" ];
         modules-right = [
           "pulseaudio"
           "memory"

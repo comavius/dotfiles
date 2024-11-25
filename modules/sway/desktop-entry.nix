@@ -2,7 +2,8 @@
   username,
   pkgs,
   ...
-}: {
+}:
+{
   home.file = {
     ".home-manager/sway/sway.desktop".text = ''
       [Desktop Entry]
