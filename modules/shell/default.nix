@@ -16,6 +16,11 @@
       size = 10000;
       path = "/home/${username}/.zsh_history";
     };
+    envExtra = ''
+      if [ -f "/home/${username}/.profile" ]; then
+      source "/home/${username}/.profile"
+      fi
+    '';
   };
   home.sessionVariables.SHELL = "zsh";
 }
