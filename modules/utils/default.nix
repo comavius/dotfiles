@@ -9,5 +9,6 @@
     pkgs.nixd
     pkgs.pre-commit
     pkgs.nano
+    pkgs.dive
   ];
 }
