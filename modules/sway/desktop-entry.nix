@@ -16,7 +16,7 @@
     ".home-manager/sway/entry.sh" = {
       text = ''
         #!${pkgs.zsh}/bin/zsh
-        source /home/${username}/.pshenv
+        source /home/${username}/.zshenv
         source /home/${username}/.zshrc
         ${pkgs.nixgl.nixGLMesa}/bin/nixGLMesa ${pkgs.sway}/bin/sway
       '';
